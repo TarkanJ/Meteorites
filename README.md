@@ -24,11 +24,17 @@ years dictionary → counting occurrences by year
 
 max() → finding the maximum value
 
-
+Note
+----
 in the actual dataset there are some records that do not have the mass key at all.
+
 Therefore => meteorite["mass"] will fall into KeyError: 'mass'
 
-The simplest fix is to use .get("mass"). This returns None if "mass" is not present in the record at all.
+The simplest fix is to use .get("mass").
+
+This returns None if "mass" is not present in the record at all.
+
+
 And most importantly, I wouldn't use pandas or any external libraries.
 
 In my opinion, that would be unnecessarily complicated for a task like this.
